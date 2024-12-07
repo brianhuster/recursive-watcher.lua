@@ -11,7 +11,7 @@
 
 local M = {}
 
-local uv = vim.uv
+local uv = vim and (vim.uv or vim.loop) or require('luv')
 
 ---@class Watcher
 ---@field directory string
